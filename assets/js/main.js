@@ -1,9 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+  initActiveNav();
   initPortfolio();
   initTimeline();
   initStatCounters();
   initMobileMenu();
 });
+
+/* ----- Active nav link (current page) ----- */
+function initActiveNav() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  const current = path === '' ? 'index.html' : path;
+
+  document.querySelectorAll('nav a[href], #mobile-menu-panel a[href]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || link.classList.contains('bg-text-alternative')) return;
+
+    const linkPath = href.split('/').pop();
+    if (linkPath === current) {
+      link.classList.remove('text-text-secondary', 'hover:text-text-primary');
+      link.classList.add('text-text-alternative');
+    }
+  });
+}
 
 /* ----- Portfolio (index & about) ----- */
 function initPortfolio() {

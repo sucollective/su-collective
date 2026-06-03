@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SU Collective</title>
+  <title>Cookies &amp; Technical Standards | SU Collective</title>
 
   <!-- ========== HEAD: Fonts & assets ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,9 @@
       .site-container { @apply mx-auto w-full max-w-7xl; }
       .portfolio-item .portfolio-item-index, .portfolio-item .portfolio-item-title { @apply text-text-primary; }
       .portfolio-item.is-active .portfolio-item-index, .portfolio-item.is-active .portfolio-item-title { @apply text-text-alternative; }
+      .timeline-item .timeline-item-dot { @apply border-2 border-text-alternative bg-background-primary; }
+      .timeline-item.is-active .timeline-item-dot { @apply border-text-alternative bg-text-alternative; }
+      .timeline-item.is-active .timeline-item-year { @apply text-text-alternative; }
     }
   </style>
 </head>
@@ -101,7 +104,18 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="main-content">
 
-    <!-- Page sections -->
+    <section class="site-gutter bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="legal-heading">
+      <div class="site-container">
+          <h1 id="legal-heading" class="type-h2 mb-8 md:mb-10">Cookies &amp; Technical Standards</h1>
+          <p class="type-h6 mb-6">Our website uses essential technology to provide a secure and seamless browsing experience. We believe in transparency regarding how we manage your digital interaction with our studio.</p>
+          <h2 class="type-h2 mb-4 mt-10 md:mt-12">Essential Cookies:</h2>
+          <p class="type-h6 mb-6">These cookies are necessary for the basic functionality of the website, such as page navigation and secure area access. Without these, the site cannot function as intended. They do not collect personal identification data.</p>
+          <h2 class="type-h2 mb-4 mt-10 md:mt-12">Performance and Analytics:</h2>
+          <p class="type-h6 mb-6">We utilize standard analytical tools to understand how our site performs across different devices and browsers, ensuring our digital presence remains consistent with the high standards of the Apple Design System and other modern web benchmarks we adhere to.</p>
+          <h2 class="type-h2 mb-4 mt-10 md:mt-12">Managing Your Preferences:</h2>
+          <p class="type-h6 mb-6">You have the right to accept or decline cookies through your browser settings. Please note that disabling essential cookies may impact your ability to fully experience our website's features. For further details on how to manage your cookie preferences, consult your browser's help documentation.</p>
+      </div>
+    </section>
 
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
@@ -174,7 +188,8 @@
               <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
             </svg>
           </a>
-        </div></div>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- ========== END FOOTER ========== -->
