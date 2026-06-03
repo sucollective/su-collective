@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initPortfolio();
+  initProcessStep();
   initTimeline();
   initStatCounters();
   initMobileMenu();
@@ -52,6 +53,83 @@ function initPortfolio() {
         preview.style.opacity = '';
       }, 150);
     }
+
+    if (fromUser) {
+      paused = false;
+      restartAutoplay();
+    }
+  };
+
+  const advance = () => {
+    if (paused) return;
+    index = (index + 1) % items.length;
+    setActive(items[index]);
+  };
+
+  const restartAutoplay = () => {
+    if (timer) window.clearInterval(timer);
+    timer = window.setInterval(advance, AUTOPLAY_MS);
+  };
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => setActive(item, true));
+  });
+
+  if (section) {
+    section.addEventListener('mouseenter', () => {
+      paused = true;
+    });
+    section.addEventListener('mouseleave', () => {
+      paused = false;
+      restartAutoplay();
+    });
+  }
+
+  items[0].classList.add('is-active');
+  restartAutoplay();
+}
+
+/* ----- Process steps (services) ----- */
+function initProcessStep() {
+  const preview = document.getElementById('process-preview');
+  const headingEl = document.getElementById('process-step-heading');
+  const descriptionEl = document.getElementById('process-step-description');
+  const contentEl = document.getElementById('process-content');
+  const section = document.getElementById('services-process');
+  const items = section
+    ? Array.from(section.querySelectorAll('[data-process-item]'))
+    : [];
+  if (!items.length) return;
+
+  const AUTOPLAY_MS = 2800;
+  let index = 0;
+  let timer = null;
+  let paused = false;
+
+  const setActive = (item, fromUser = false) => {
+    items.forEach((el) => {
+      const isActive = el === item;
+      el.classList.toggle('is-active', isActive);
+      el.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    index = items.indexOf(item);
+
+    if (contentEl) contentEl.style.opacity = '0';
+    if (preview) preview.style.opacity = '0';
+
+    window.setTimeout(() => {
+      if (headingEl) headingEl.textContent = item.dataset.heading || '';
+      if (descriptionEl) descriptionEl.textContent = item.dataset.description || '';
+
+      const { image, alt } = item.dataset;
+      if (preview && image) {
+        preview.src = image;
+        preview.alt = alt || '';
+      }
+
+      if (contentEl) contentEl.style.opacity = '';
+      if (preview) preview.style.opacity = '';
+    }, 150);
 
     if (fromUser) {
       paused = false;
