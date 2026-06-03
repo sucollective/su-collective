@@ -20,8 +20,8 @@
             sans: ['"Albert Sans"', 'sans-serif'],
           },
           colors: {
-            background: { primary: '#090B10' },
-            text: { primary: '#F3F4F6', alternative: '#C9A843', secondary: '#94A3B8' }
+            background: { primary: '#0A1128', secondary: '#111A3A', tertiary: '#1E294B' },
+            text: { primary: '#F8FAFC', alternative: '#D4AF37', secondary: '#94A3B8' }
           },
           keyframes: {
             'loop-vertically': {
@@ -64,7 +64,7 @@
 <body class="font-sans text-[1.125rem] antialiased bg-background-primary text-text-primary">
 
   <!-- ========== NAVBAR ========== -->
-  <nav class="site-gutter sticky top-0 z-50 flex w-full items-center border-b border-white/10 bg-background-primary py-4">
+  <nav class="site-gutter sticky top-0 z-50 flex w-full items-center border-b border-background-tertiary bg-background-primary py-4">
     <div class="site-container flex items-center justify-between">
       <a href="index.html" class="type-h4 font-bold tracking-wider">SU COLLECTIVE</a>
 
@@ -87,7 +87,7 @@
     </div>
   </nav>
 
-  <div id="mobile-menu-panel" class="site-gutter hidden absolute left-0 top-[73px] w-full border-b border-white/10 bg-background-primary py-6 lg:hidden z-40 shadow-2xl">
+  <div id="mobile-menu-panel" class="site-gutter hidden absolute left-0 top-[73px] w-full border-b border-background-tertiary bg-background-primary py-6 lg:hidden z-40 shadow-2xl">
     <div class="site-container flex flex-col gap-6 text-center">
       <a href="about.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">About</a>
       <a href="services.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Services</a>
@@ -149,7 +149,7 @@
     <!-- ========== END HERO ========== -->
 
     <!-- ========== CLIENTS ========== -->
-    <section id="clients" class="site-gutter border-t border-white/10 bg-background-primary py-16 md:py-20 lg:py-24" aria-labelledby="clients-heading">
+    <section id="clients" class="site-gutter border-t border-background-tertiary bg-background-secondary py-16 md:py-20 lg:py-24" aria-labelledby="clients-heading">
       <div class="site-container flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
         <div class="max-w-sm shrink-0">
           <p class="type-overline mb-2">Trusted by</p>
@@ -180,7 +180,7 @@
     <!-- ========== END CLIENTS ========== -->
 
     <!-- ========== PORTFOLIO ========== -->
-    <section id="portfolio" class="site-gutter border-t border-white/10 bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="portfolio-heading">
+    <section id="portfolio" class="site-gutter border-t border-background-tertiary bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="portfolio-heading">
       <div class="site-container">
         <header class="mb-12 md:mb-16">
           <p class="type-overline mb-2">Selected work</p>
@@ -199,7 +199,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col divide-y divide-white/10 lg:pl-4 xl:pl-8" role="tablist" aria-label="Case studies">
+          <div class="flex flex-col divide-y divide-background-tertiary lg:pl-4 xl:pl-8" role="tablist" aria-label="Case studies">
             <button
               type="button"
               role="tab"
@@ -289,7 +289,7 @@
     </section>
     <!-- ========== END PORTFOLIO ========== -->
     <!-- ========== STATS ========== -->
-    <section id="stats" class="site-gutter border-t border-white/10 bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="stats-heading">
+    <section id="stats" class="site-gutter border-t border-background-tertiary bg-background-secondary py-16 md:py-24 lg:py-28" aria-labelledby="stats-heading">
       <div class="site-container">
         <header class="mb-12 max-w-lg md:mb-16 lg:mb-20">
           <p class="type-overline mb-2">By the numbers</p>
@@ -317,7 +317,7 @@
     <!-- ========== END STATS ========== -->
 
     <!-- ========== BLOG ========== -->
-    <section id="blog" class="site-gutter border-t border-white/10 bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="blog-heading">
+    <section id="blog" class="site-gutter border-t border-background-tertiary bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="blog-heading">
       <div class="site-container">
         <header class="mb-12 md:mb-16">
           <p class="type-overline mb-2">Blog</p>
@@ -366,7 +366,7 @@
     <!-- ========== END BLOG ========== -->
 
     <!-- ========== CTA ========== -->
-    <section id="cta" class="relative overflow-hidden border-t border-white/10" aria-labelledby="cta-heading">
+    <section id="cta" class="relative overflow-hidden border-t border-background-tertiary bg-background-secondary" aria-labelledby="cta-heading">
       <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
         <img
           src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
@@ -406,7 +406,7 @@
   <!-- ========== END MAIN CONTENT ========== -->
 
   <!-- ========== FOOTER ========== -->
-  <footer id="footer" class="site-gutter type-body-sm border-t border-white/10 bg-background-primary py-12 text-text-secondary md:py-16 lg:py-20">
+  <footer id="footer" class="site-gutter type-body-sm border-t border-background-tertiary bg-background-primary py-12 text-text-secondary md:py-16 lg:py-20">
     <div class="site-container">
       <div class="grid grid-cols-1 gap-12 pb-12 md:gap-16 md:pb-16 lg:grid-cols-[1fr_minmax(0,20rem)] lg:gap-20 lg:pb-20">
         <div class="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
@@ -447,15 +447,15 @@
           <p class="type-footer-heading mb-3 md:mb-4">Subscribe</p>
           <p class="type-ui mb-4">Join our newsletter to stay up to date on features and releases.</p>
           <form class="grid gap-3 sm:grid-cols-[1fr_auto]">
-            <input type="email" id="footer-email" placeholder="Enter your email" class="type-ui min-h-11 w-full border border-white/10 bg-background-primary px-3 py-2 text-text-primary placeholder:text-text-secondary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20">
-            <button type="submit" class="type-ui inline-flex min-h-11 items-center justify-center border border-white/10 px-5 py-2 text-text-primary transition-colors hover:border-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20">
+            <input type="email" id="footer-email" placeholder="Enter your email" class="type-ui min-h-11 w-full border border-background-tertiary bg-background-primary px-3 py-2 text-text-primary placeholder:text-text-secondary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20">
+            <button type="submit" class="type-ui inline-flex min-h-11 items-center justify-center border border-background-tertiary px-5 py-2 text-text-primary transition-colors hover:border-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20">
               Subscribe
             </button>
           </form>
         </div>
       </div>
 
-      <div class="type-ui flex flex-col-reverse gap-8 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+      <div class="type-ui flex flex-col-reverse gap-8 border-t border-background-tertiary pt-8 lg:flex-row lg:items-center lg:justify-between">
         <div class="flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:gap-6">
           <p>© 2026 SU Collective. All rights reserved.</p>
           <a href="#" class="underline transition-colors hover:text-text-primary">Privacy Policy</a>
