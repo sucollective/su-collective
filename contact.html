@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SU Collective</title>
 
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
   <!-- ========== HEAD: Fonts & assets ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,9 +77,8 @@
       </a>
 
       <div class="hidden lg:flex items-center gap-8">
-        <a href="about.html" class="type-ui font-medium text-text-secondary transition-colors hover:text-text-primary">About</a>
+        <a href="index.html" class="type-ui font-medium text-text-secondary transition-colors hover:text-text-primary">Home</a>
         <a href="services.html" class="type-ui font-medium text-text-secondary transition-colors hover:text-text-primary">Services</a>
-        <a href="case-study.html" class="type-ui font-medium text-text-secondary transition-colors hover:text-text-primary">Portfolio</a>
         <a href="contact.html" class="type-ui font-medium text-text-secondary transition-colors hover:text-text-primary">Contact</a>
       </div>
 
@@ -94,10 +96,9 @@
 
   <div id="mobile-menu-panel" class="site-gutter hidden absolute left-0 top-[73px] w-full bg-background-primary py-6 lg:hidden z-40 shadow-2xl">
     <div class="site-container flex flex-col gap-6 text-center">
-      <a href="about.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">About</a>
+      <a href="index.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Home</a>
       <a href="services.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Services</a>
-      <a href="case-study.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Portfolio</a>
-      <a href="contact.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Contact</a>
+        <a href="contact.html" class="type-h6 font-medium text-text-secondary hover:text-text-primary">Contact</a>
       <a href="contact.html" class="type-ui mt-4 inline-block bg-text-alternative px-6 py-3 font-semibold text-background-primary">Start Project</a>
     </div>
   </div>
@@ -109,13 +110,12 @@
     <!-- ========== CONTACT HEADER ========== -->
     <section id="contact-header" class="site-gutter bg-background-primary py-16 md:py-24 lg:py-28" aria-labelledby="contact-heading">
       <div class="site-container">
-        <div class="mx-auto max-w-lg text-center">
+        <div class="mx-auto max-w-2xl text-center">
           <h1 id="contact-heading" class="type-h1 mb-5 md:mb-6">
-            Short heading here
+            Let's Start a Conversation
           </h1>
           <p class="type-h6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+            Whether you're looking to strengthen your digital presence, improve customer engagement or explore new growth opportunities, we'd love to hear from you. We'll explore how we can help you move forward.
           </p>
         </div>
       </div>
@@ -127,20 +127,16 @@
         <div class="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
           <div class="overflow-hidden rounded-sm">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="https://images.unsplash.com/photo-1615840287254-839244a61a1d?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Contact section image"
               class="aspect-[4/5] w-full object-cover opacity-80 grayscale transition-opacity duration-300 hover:opacity-100"
               loading="lazy"
             >
           </div>
           <div>
-            <p class="type-overline mb-2 md:mb-4">Get in touch</p>
-            <h2 id="contact-form-heading" class="type-h2 mb-5 md:mb-6">
+            <h2 id="contact-form-heading" class="type-h2 mb-6 md:mb-8">
               Contact us
             </h2>
-            <p class="type-h6 mb-6 md:mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
             <form
               id="contact-form-spree"
               action="https://formspree.io/f/xzdqpong"
@@ -149,7 +145,7 @@
             >
               <input type="hidden" name="_subject" value="New enquiry via SU Collective website">
               <div>
-                <label class="type-label mb-2 block" for="name">Name</label>
+                <label class="type-label mb-2 block" for="name">Name <span class="text-text-alternative" aria-hidden="true">*</span></label>
                 <input
                   type="text"
                   id="name"
@@ -160,7 +156,18 @@
                 >
               </div>
               <div>
-                <label class="type-label mb-2 block" for="email">Email</label>
+                <label class="type-label mb-2 block" for="company">Company Name <span class="text-text-alternative" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company_name"
+                  required
+                  autocomplete="organization"
+                  class="type-ui min-h-11 w-full border border-background-tertiary bg-background-primary px-3 py-2 text-text-primary placeholder:text-text-secondary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+              </div>
+              <div>
+                <label class="type-label mb-2 block" for="email">Email <span class="text-text-alternative" aria-hidden="true">*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -171,13 +178,34 @@
                 >
               </div>
               <div>
-                <label class="type-label mb-2 block" for="message">Message</label>
+                <label class="type-label mb-2 block" for="help-with">What do you need help with? <span class="text-text-alternative" aria-hidden="true">*</span></label>
+                <select
+                  id="help-with"
+                  name="help_with"
+                  required
+                  class="type-ui min-h-11 w-full border border-background-tertiary bg-background-primary px-3 py-2 text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="Digital Marketing Strategy">Digital Marketing Strategy</option>
+                  <option value="Email Marketing & Automation">Email Marketing &amp; Automation</option>
+                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="Website Design & Management">Website Design &amp; Management</option>
+                  <option value="Content Management">Content Management</option>
+                  <option value="Paid Media Campaigns">Paid Media Campaigns</option>
+                  <option value="CRM & Customer Journey Automation">CRM &amp; Customer Journey Automation</option>
+                  <option value="Ongoing Marketing Support">Ongoing Marketing Support</option>
+                  <option value="Full-Service Digital Marketing (more than one service)">Full-Service Digital Marketing (more than one service)</option>
+                  <option value="I'd Like to Discuss My Requirements">I'd Like to Discuss My Requirements</option>
+                </select>
+              </div>
+              <div>
+                <label class="type-label mb-2 block" for="message">Message <span class="text-text-alternative" aria-hidden="true">*</span></label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   rows="6"
-                  placeholder="Type your message..."
+                  placeholder="Tell us a bit about your business"
                   class="type-ui min-h-[11.25rem] w-full resize-y border border-background-tertiary bg-background-primary px-3 py-2 text-text-primary placeholder:text-text-secondary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
                 ></textarea>
               </div>
@@ -185,12 +213,14 @@
                 <input
                   type="checkbox"
                   id="terms"
-                  name="accept_terms"
+                  name="accept_terms_and_newsletter"
                   value="yes"
                   required
                   class="mt-1 size-4 shrink-0 rounded border border-background-tertiary bg-background-primary text-text-alternative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary"
                 >
-                <label class="type-body-sm cursor-pointer" for="terms">I accept the Terms</label>
+                <label class="type-body-sm cursor-pointer" for="terms">
+                  Yes, accept <a href="terms.html" class="text-text-alternative underline transition-colors hover:text-text-primary">terms &amp; conditions</a> and subscribe me to your newsletter. <span class="text-text-alternative" aria-hidden="true">*</span>
+                </label>
               </div>
               <div>
                 <button
@@ -208,7 +238,7 @@
     <!-- ========== END CONTACT FORM ========== -->
 
     <!-- ========== CONTACT INFO ========== -->
-    <section id="contact-info" class="site-gutter bg-background-primary py-16 md:py-24 lg:py-28" aria-label="Contact methods">
+    <section id="contact-info" class="site-gutter bg-background-tertiary py-16 md:py-24 lg:py-28" aria-label="Contact methods">
       <div class="site-container">
         <div class="grid auto-cols-fr gap-x-8 gap-y-12 sm:gap-x-8 md:grid-cols-2 md:gap-y-16 lg:grid-cols-4">
           <div class="flex flex-col items-center justify-start text-center">
@@ -306,7 +336,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="type-h4 mb-3 md:mb-4">Location</h3>
+            <h3 class="type-h4 mb-3 md:mb-4">Registered Office</h3>
             <p class="type-body-sm mb-5 md:mb-6">
               Unit 3b Berol House, 25 Ashley Road, Tottenham Hale, London, UK, N17 9LJ
             </p>
@@ -316,44 +346,6 @@
       </div>
     </section>
     <!-- ========== END CONTACT INFO ========== -->
-
-    <!-- ========== CTA ========== -->
-    <section id="cta" class="relative overflow-hidden bg-background-secondary" aria-labelledby="cta-heading">
-      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-        <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-          alt=""
-          class="size-full object-cover object-center grayscale"
-        >
-        <div class="absolute inset-0 bg-background-primary/75"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-background-primary/90 via-background-primary/70 to-background-primary/85"></div>
-      </div>
-
-      <div class="site-gutter relative z-10 py-16 md:py-24 lg:py-28">
-        <div class="site-container">
-          <div class="grid grid-cols-1 items-start gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
-            <h2 id="cta-heading" class="type-h2 max-w-xl">
-              Medium length heading goes here
-            </h2>
-
-            <div class="flex max-w-xl flex-col lg:max-w-none lg:justify-self-end">
-              <p class="type-h6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-              </p>
-              <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
-                <a href="#contact-form" class="type-ui inline-flex items-center justify-center bg-text-alternative px-6 py-3 font-semibold text-background-primary transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-alternative focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary">
-                  Start Project
-                </a>
-                <a href="case-study.html" class="type-ui inline-flex items-center justify-center border border-text-primary/20 bg-background-primary/40 px-6 py-3 font-medium text-text-primary backdrop-blur-sm transition-colors hover:border-text-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary">
-                  View Work
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ========== END CTA ========== -->
 
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
@@ -377,9 +369,7 @@
           <div>
             <p class="type-footer-heading mb-3 md:mb-4">Company</p>
             <ul class="type-ui space-y-1">
-              <li><a href="about.html" class="transition-colors hover:text-text-primary">About</a></li>
-              <li><a href="case-study.html" class="transition-colors hover:text-text-primary">Portfolio</a></li>
-              <li><a href="services.html" class="transition-colors hover:text-text-primary">Services</a></li>
+              <li><a href="index.html" class="transition-colors hover:text-text-primary">Home</a></li>              <li><a href="services.html" class="transition-colors hover:text-text-primary">Services</a></li>
               <li><a href="contact.html" class="transition-colors hover:text-text-primary">Contact</a></li>
             </ul>
           </div>
